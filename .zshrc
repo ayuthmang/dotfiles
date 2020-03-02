@@ -132,4 +132,8 @@ export NVM_DIR="$HOME/.nvm"
 export GOPATH=$HOME/go
 
 # fix yarn
-#brew unlink yarn && brew link yarn
+# brew unlink yarn && brew link yarn
+brew link --overwrite yarn
+
+# flutter
+export PATH=$HOME/flutter/bin:$PATH

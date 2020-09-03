@@ -1,18 +1,21 @@
+export PATH="/usr/local/opt/ncurses/bin:$PATH"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.antigen/bundles/robbyrussell/oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -33,7 +36,7 @@ ZSH_THEME="robbyrussell"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -64,18 +67,11 @@ ZSH_THEME="robbyrussell"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  ruby
-  osx
-  zsh_reload
-  virtualenv
-  pipenv
-)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,13 +101,23 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# antigen
+source /usr/local/share/antigen/antigen.zsh
+source $HOME/.antigenrc
+
+# zsh-users/zsh-history-substring-search
+bindkey '\eOA' history-substring-search-up
+bindkey '\eOB' history-substring-search-down
+
+# zsh-users/zsh-autosuggestions
+bindkey '^ ' autosuggest-accept
+
+# spaceship-prompt
+SPACESHIP_TIME_SHOW=true
 
 # jenv
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
-
-# gpg fixes
-export GPG_TTY=$(tty)
 
 # rbenv
 eval "$(rbenv init -)"
@@ -124,16 +130,3 @@ export PATH="/usr/local/anaconda3/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# export NODE_PATH=$(npm root --quiet -g)
-# export NODE_PATH=$(yarn global dir)/node_modules
-
-# GOPATH
-export GOPATH=$HOME/go
-
-# fix yarn
-# brew unlink yarn && brew link yarn
-brew link --overwrite yarn
-
-# flutter
-export PATH=$HOME/flutter/bin:$PATH

@@ -6,6 +6,7 @@ antigen bundle git
 antigen bundle command-not-found
 antigen bundle docker
 antigen bundle zsh_reload
+antigen bundle lukechilds/zsh-nvm
 
 # Load bundles from external repos.
 antigen bundle zsh-users/zsh-completions

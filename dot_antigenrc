@@ -4,7 +4,6 @@ antigen use oh-my-zsh
 # Load bundles from the default repo (oh-my-zsh).
 antigen bundle git
 antigen bundle command-not-found
-antigen bundle docker
 antigen bundle zsh_reload
 antigen bundle lukechilds/zsh-nvm
 
@@ -16,7 +15,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Select theme.
 # antigen theme denysdovhan/spaceship-prompt
-antigen theme robbyrussell 
+antigen theme robbyrussell
 
 # Tell Antigen that you're done.
 antigen apply

@@ -1,5 +1,6 @@
+
 # antigen
-source /usr/local/share/antigen/antigen.zsh
+source /opt/homebrew/share/antigen/antigen.zsh
 source $HOME/.antigenrc
 
 # fvm
@@ -22,7 +23,7 @@ export PATH="/usr/local/anaconda3/bin:$PATH"
 
 # rbenv
 # export PATH=$HOME/.rbenv/bin:$PATH
-# eval "$(rbenv init -)"
+eval "$(rbenv init -)"
 
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
@@ -45,3 +46,9 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 ## [/Completion]
 
 export PATH="/usr/local/sbin:$PATH"
+
+# rbenv
+eval "$(rbenv init - zsh)"
+
+# z
+. /opt/homebrew/etc/profile.d/z.sh

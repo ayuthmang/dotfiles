@@ -1,5 +1,7 @@
 # dotfiles
 
+A collection of my dotfiles.
+
 ## Requirement
 
 ```bash

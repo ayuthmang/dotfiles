@@ -49,3 +49,6 @@ export PATH="/usr/local/sbin:$PATH"
 
 # z
 . /opt/homebrew/etc/profile.d/z.sh
+
+# antigen - aspirewit/zsh-nvm-auto-switch
+source ~/.zsh/zsh-nvm-auto-switch/zsh-nvm-auto-switch.zsh

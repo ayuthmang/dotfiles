@@ -28,3 +28,10 @@ $ chezmoi git -- commit -m "chore: update files"
 # push changes
 $ chezmoi git -- push
 ```
+
+## Other Useful Commands
+
+```bash
+# change to the dotfiles directory
+$ chezmoi cd
+```

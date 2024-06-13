@@ -1,6 +1,4 @@
-
 # antigen
-source /opt/homebrew/share/antigen/antigen.zsh
 source $HOME/.antigenrc
 
 # fvm

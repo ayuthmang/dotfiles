@@ -1,3 +1,5 @@
+source /opt/homebrew/share/antigen/antigen.zsh
+
 # Load oh-my-zsh library.
 antigen use oh-my-zsh
 

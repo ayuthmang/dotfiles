@@ -51,7 +51,7 @@ export PATH="/usr/local/sbin:$PATH"
 . /opt/homebrew/etc/profile.d/z.sh
 
 # antigen - aspirewit/zsh-nvm-auto-switch
-source ~/.zsh/zsh-nvm-auto-switch/zsh-nvm-auto-switch.zsh
+source $HOME/.antigen/bundles/aspirewit/zsh-nvm-auto-switch/zsh-nvm-auto-switch.plugin.zsh
 
 # gcloud
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"

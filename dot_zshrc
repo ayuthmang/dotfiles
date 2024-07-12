@@ -1,6 +1,9 @@
 # antigen
 source $HOME/.antigenrc
 
+# zsh
+ZSH_THEME="dracula-pro
+
 # fvm
 export PATH="$HOME/.fvm/flutter_sdk/bin:$PATH"
 

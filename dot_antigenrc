@@ -18,7 +18,8 @@ antigen bundle aspirewit/zsh-nvm-auto-switch
 
 # Select theme.
 # antigen theme denysdovhan/spaceship-prompt
-antigen theme robbyrussell
+# antigen theme robbyrussell
+antigen theme romkatv/powerlevel10k
 
 # Tell Antigen that you're done.
 antigen apply

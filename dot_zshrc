@@ -1,8 +1,17 @@
 # antigen
 source $HOME/.antigenrc
 
+
+# p10k
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # zsh
-ZSH_THEME="dracula-pro
+ZSH_THEME="dracula-pro"
 
 # fvm
 export PATH="$HOME/.fvm/flutter_sdk/bin:$PATH"
@@ -57,3 +66,11 @@ source $HOME/.antigen/bundles/aspirewit/zsh-nvm-auto-switch/zsh-nvm-auto-switch.
 # gcloud
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+
+# dvm
+[ -f /opt/homebrew/opt/dvm/dvm.sh ] && . /opt/homebrew/opt/dvm/dvm.sh
+
+# p10k
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(jenv init -)"
